@@ -20,12 +20,12 @@
             "homepage": "https://github.com/analuisadev"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Controller\\": "Controller/",
-            "Model\\": "Model/"
-        }
-    },
+    // "autoload": {
+    //     "psr-4": {
+    //         "Controller\\": "Controller/",
+    //         "Model\\": "Model/"
+    //     }
+    // },
     "minimum-stability": "dev",
     "require": {
         "php": ">= 8.0",
