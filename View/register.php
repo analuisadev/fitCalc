@@ -1,6 +1,6 @@
 <?php
-require_once '../vendor/autoload.php';
 session_start();
+require_once '../vendor/autoload.php';
 
 use Model\User;
 
@@ -112,7 +112,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="text-center">Já tem uma conta? <a href="../index.php">Faça login aqui</a></p>
             </div>
         </form>
-        <p><?php echo $resultMessage;?></p>
+        <p class="text-white mt-2 fs-5"><?php echo $resultMessage;?></p>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
