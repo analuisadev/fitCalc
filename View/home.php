@@ -1,3 +1,25 @@
+<?php
+// VERIFICA SE A SESSÃO FOI INICIADA
+session_start();
+require_once '../vendor/autoload.php';
+
+use Model\Imcs;
+
+$imc = new Imcs();
+
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if(isset($_POST['weight'], $_POST['height'])) {
+        $weight = $_POST['weight'];
+        $height = $_POST['height'];
+
+        $result = round($weight / ($height * $height), 2);    
+
+        $imc->createImc($weight, $height, $result);
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
